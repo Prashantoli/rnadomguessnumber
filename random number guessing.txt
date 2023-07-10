@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+	int myguess,userguess;
+	srand(time(NULL));
+myguess=rand()%10;
+printf("the have a  number in my mind betweeen (0-9) can you guess it\n");
+while(1){
+printf("enter the user guess number:");
+scanf("%d",&userguess);
+if (myguess==userguess)
+{
+	printf("yes you got my guess number %d\n",userguess);
+	break;
+}
+else if (myguess>userguess){
+	printf("my guess number is greater than %d Try again \n",userguess);
+}
+else {
+printf("my guess number is smaller than %d Try again\n",userguess);
+}
+}
+return 0;
+}
